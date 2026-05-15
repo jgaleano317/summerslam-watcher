@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout Code') {
       steps {
-        git(url: 'https://github.com/jfrog/sample-npm-project.git', branch: 'main')
+        git(url: 'https://github.com/faraday-academy/curriculum-app.git', branch: 'main')
       }
     }
 
@@ -17,7 +17,7 @@ pipeline {
 
         stage('Front End Unit Test') {
           steps {
-            sh 'cd cirriculum-front && npm i & npm run test:unit'
+            sh 'cd sample-npm-project'
           }
         }
 
